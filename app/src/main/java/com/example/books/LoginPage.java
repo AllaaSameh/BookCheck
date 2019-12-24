@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class LoginPage extends AppCompatActivity {
 
@@ -17,52 +18,40 @@ public class LoginPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
 
-        TextView  tx_newaccount;
+
         final EditText ed_username ,ed_pass;
         Button btn_login;
+        TextView  tx_newaccount;
 
 
 
-         ed_username = findViewById(R.id.ed_username);
+         ed_username = findViewById(R.id.ed_email);
          ed_pass = findViewById(R.id.ed_pass);
          btn_login = findViewById(R.id.btn_login);
 
+        final SharedPreferences data = getSharedPreferences("file",0);
 
-/*
-        final String email = getIntent().getExtras().getString("email");
-        final String pass = getIntent().getExtras().getString("pass");
-
-        final String checkname = ed_username.getText().toString();
-        final String checkpass =  ed_pass.getText().toString();*/
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*
-                SharedPreferences userDetials = getSharedPreferences("user detials", 0);
-                SharedPreferences.Editor edit = userDetials.edit();
-                edit.clear();
-                edit.commit();*/
 
+                String email = data.getString("email","nouser");
+                String pass = data.getString("pass","nouser");
 
-               /* if (checkname.equals(email) &&checkpass.equals(pass))
-                {
-                    Intent go = new Intent(LoginPage.this,BookHome.class);
+                if(email.equals(ed_username.getText().toString()) && pass.equals(ed_pass.getText().toString())) {
+
+                    Intent go = new Intent(LoginPage.this, BookHome.class);
                     startActivity(go);
                     finish();
-                }*/
+                }
 
-                Intent go = new Intent(LoginPage.this,BookHome.class);
-                startActivity(go);
-                finish();
+                else
+                {
+                    Toast.makeText(LoginPage.this,"User name or Password is incorrect",Toast.LENGTH_SHORT).show();
+                }
 
             }
         });
-
-
-
-
-
-
 
 
         // create new account

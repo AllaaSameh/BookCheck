@@ -5,8 +5,27 @@ public class Book {
     private int id;
     private String Bookname;
     private String Booktype;
-    private int NumComment;
     private int read;
+    private String comment;
+
+    public Book() {
+    }
+
+    public Book(int id, String bookname, String booktype, int read, String comment) {
+        this.id = id;
+        Bookname = bookname;
+        Booktype = booktype;
+        this.read = read;
+        this.comment = comment;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
 
     public int getRead() {
         return read;
@@ -40,11 +59,4 @@ public class Book {
         Booktype = booktype;
     }
 
-    public int getNumComment() {
-        return NumComment;
-    }
-
-    public void setNumComment(int numComment) {
-        NumComment = numComment;
-    }
 }

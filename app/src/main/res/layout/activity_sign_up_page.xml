@@ -65,9 +65,9 @@
         android:layout_margin="16dp"
         android:ems="10"
 
-        android:textStyle="italic"
         android:hint="Enter Password"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName|text|textPassword"
+        android:textStyle="italic" />
 
     <Button
         android:id="@+id/btn_save"

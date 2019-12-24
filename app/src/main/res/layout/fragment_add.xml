@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#ffffff"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".AddFragment">
+
+    <TextView
+        android:id="@+id/tx_bookname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Book name"
+        android:textSize="25sp"
+        android:textStyle="italic"
+        android:textColor="#5D0D7E"/>
+
+    <EditText
+        android:id="@+id/ed_bookname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Enter bbok name"
+        android:textSize="25sp"
+        android:textStyle="italic"
+        android:textColor="#ED000000"/>
+
+    <TextView
+        android:id="@+id/tx_booktype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Book Type "
+        android:textSize="25sp"
+        android:textStyle="italic"
+        android:textColor="#5D0D7E"/>
+
+    <EditText
+        android:id="@+id/ed_booktype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Enter bbok type"
+        android:textSize="25sp"
+        android:textStyle="italic"
+        android:textColor="#ED000000"/>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:text="Save"
+        android:textSize="25sp"
+        android:textStyle="italic"
+        android:textColor="#ED000000"
+        android:background="#88AFAAAA"/>
+</LinearLayout>

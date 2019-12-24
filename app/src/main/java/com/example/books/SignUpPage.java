@@ -42,18 +42,13 @@ public class SignUpPage extends AppCompatActivity {
                 pin.putString("pass",ed_pass.getText().toString());
                 pin.commit();
 
-                Toast.makeText(SignUpPage.this,"Data is saved",Toast.LENGTH_SHORT).show();
-
-                // to move data between signup page and login
-               /* Bundle databundle = new Bundle();
-
-                databundle.putString("email",ed_newemail.getText().toString());
-                databundle.putString("pass",ed_pass.getText().toString());
 
                 Intent go = new Intent(SignUpPage.this,LoginPage.class);
-                go.putExtras(databundle);
                 startActivity(go);
-                finish();*/
+                finish();
+
+
+                // to move data between signup page and login
 
             }
         });
